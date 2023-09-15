@@ -31,9 +31,10 @@ frequencies = {}
 for item in data:
     frequency = item['frequency']
 
-    if frequency in frequencies:
-        frequencies[frequency] += 1
-    else:
-        frequencies[frequency] = 1
+    #if frequency in frequencies:
+    #    frequencies[frequency] += 1
+    #else:
+    #    frequencies[frequency] = 1
+    frequencies[frequency] = frequencies.get(frequency, 0) + 1
 
 print(json.dumps(frequencies))
