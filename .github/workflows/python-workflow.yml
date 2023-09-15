@@ -42,5 +42,5 @@ jobs:
     - name: Test the application with mock data
       run: |
         python sum_frequencies.py MOCK_DATA.json
-    - run: echo "# All tests and deployments have completed successfully at `date`!" >> $GITHUB_STEP_SUMMARY
+    - run: echo "# ${{ matrix.platform }} ${{ matrix.version }} at `date`!" >> $GITHUB_STEP_SUMMARY
         
