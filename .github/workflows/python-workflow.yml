@@ -16,10 +16,10 @@ jobs:
         version: [3.7, 3.8, 3.9, 3.10]
         platform: [ubuntu-latest, macos-latest, windows-latest]
         include:
-          - version: 3.10
+          - version: 3.11
             platform: ubuntu-latest
         exclude:
-          - version: 3.6
+          - version: 3.7
             platform: windows-latest
     runs-on: ${{ matrix.platform }}
     steps:
